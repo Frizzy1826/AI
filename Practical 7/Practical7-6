@@ -14,3 +14,7 @@ model = DecisionTreeRegressor()
 model.fit(X_train,y_train)
 print("Training Accuracy:",model.score(X_train,y_train)*100)
 print("Testing Accuracy:",model.score(X_test,y_test)*100)
+
+new_data =pd.DataFrame([[11]],columns=['sepal_length'])
+prediction = model.predict(new_data)
+print("Predicted Score:",prediction[0])
